@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NATURAL LIFE - RP · Guía</title>
+<style>
+  :root {
+    --bg: #f6f7f4; --card: #ffffff; --text: #1d211c; --muted: #5e665b; --line: #e2e5de;
+    --accent: #2f7d4f; --accent-soft: #e4f1e8; --warn: #a15c00; --warn-soft: #fbf0df; --red: #b3261e; --red-soft: #fbe6e4;
+    --code: #eef0eb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #141714; --card: #1c201c; --text: #e8ebe6; --muted: #9ba396; --line: #2c322b;
+      --accent: #5fbf85; --accent-soft: #1f3326; --warn: #e9a94b; --warn-soft: #33281a; --red: #f08a82; --red-soft: #3a1f1d;
+      --code: #262b25;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 "Segoe UI", system-ui, sans-serif; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { margin-bottom: 28px; }
+  header h1 { font-size: 30px; margin: 0; letter-spacing: -0.5px; }
+  header p { margin: 4px 0 0; color: var(--muted); }
+  nav { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 8px; }
+  nav a { text-decoration: none; color: var(--accent); background: var(--accent-soft); padding: 6px 12px; border-radius: 999px; font-size: 14px; }
+  section { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 22px 24px; margin: 18px 0; }
+  h2 { font-size: 20px; margin: 0 0 12px; }
+  h3 { font-size: 16px; margin: 18px 0 6px; }
+  p { margin: 8px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: .4px; }
+  tr:last-child td { border-bottom: none; }
+  code { background: var(--code); padding: 1px 6px; border-radius: 5px; font-family: Consolas, monospace; font-size: 14px; }
+  .num { display: inline-block; min-width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 6px; background: var(--accent); color: #fff; font-weight: 700; font-size: 13px; }
+  .tag { display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 13px; font-weight: 600; white-space: nowrap; }
+  .ok { background: var(--accent-soft); color: var(--accent); }
+  .next { background: var(--warn-soft); color: var(--warn); }
+  .todo { background: var(--code); color: var(--muted); }
+  .note { border-left: 4px solid var(--warn); background: var(--warn-soft); padding: 10px 14px; border-radius: 8px; margin: 12px 0; }
+  .danger { border-left-color: var(--red); background: var(--red-soft); }
+  ol, ul { padding-left: 22px; margin: 8px 0; }
+  li { margin: 4px 0; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .box { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .box h3 { margin-top: 0; }
+  footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 30px; }
+  @media (max-width: 640px) { .cols { grid-template-columns: 1fr; } section { padding: 18px 16px; } th:nth-child(3), td:nth-child(3) { display: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>🌿 NATURAL LIFE - RP</h1>
+  <p>Guía del servidor · Última actualización: 29/09/2026</p>
+  <nav>
+    <a href="#carpeta">Esta carpeta</a>
+    <a href="#estado">Estado</a>
+    <a href="#como">Cómo hacer…</a>
+    <a href="#drogas">Sistema de drogas</a>
+    <a href="#personajes">Personajes</a>
+    <a href="#casa">Casa y HUD</a>
+    <a href="#policia">Policía</a>
+    <a href="#ems">EMS</a>
+    <a href="#mecanico">Mecánico</a>
+    <a href="#concesionario">Concesionarios</a>
+    <a href="#empresas">Dinero de empresa</a>
+    <a href="#datos">Datos técnicos</a>
+    <a href="#historial">Historial</a>
+  </nav>
+</header>
+
+<section id="carpeta">
+  <h2>📁 Qué hay en esta carpeta</h2>
+  <p>Son <b>accesos directos</b>: al abrirlos vas al archivo o carpeta real del servidor. Si cambias algo, se cambia de verdad.</p>
+  <table>
+    <tr><th>#</th><th>Nombre</th><th>Para qué sirve</th></tr>
+    <tr><td><span class="num">1</span></td><td>Iniciar servidor</td><td>Arranca el servidor. Se abre una ventana negra: <b>no la cierres</b> mientras lo uséis.</td></tr>
+    <tr><td><span class="num">2</span></td><td>Panel txAdmin</td><td>Abre el panel web para controlar el servidor (reiniciar, ver consola, jugadores…).</td></tr>
+    <tr><td><span class="num">3</span></td><td>Scripts propios (nl)</td><td>Los scripts hechos para NATURAL LIFE. Todo lo nuestro va aquí.</td></tr>
+    <tr><td><span class="num">4</span></td><td>Configuración de drogas</td><td>Precios, cantidades, tiempos y ubicaciones de la marihuana y el opio.</td></tr>
+    <tr><td><span class="num">5</span></td><td>Copias de seguridad</td><td>Copias diarias de la base de datos (carpeta <code>bd</code>) y copias hechas antes de cada cambio.</td></tr>
+    <tr><td><span class="num">6</span></td><td>Configuración del servidor</td><td>El <code>server.cfg</code>: nombre, idioma, scripts que arrancan y admins. <b>Tocar con cuidado.</b></td></tr>
+    <tr><td><span class="num">7</span></td><td>Scripts desactivados</td><td>Scripts antiguos apartados (no borrados) por si algún día hacen falta.</td></tr>
+    <tr><td><span class="num">8</span></td><td>Todos los scripts</td><td>La carpeta completa de recursos del servidor (Qbox, ox, etc.).</td></tr>
+  </table>
+  <div class="note">Para editar archivos <code>.lua</code> o <code>.cfg</code>: clic derecho → <b>Abrir con</b> → Bloc de notas (o mejor, Visual Studio Code). Después hay que <b>reiniciar el servidor</b> para que se apliquen los cambios.</div>
+</section>
+
+<section id="estado">
+  <h2>🗺️ En qué punto estamos</h2>
+  <table>
+    <tr><th>Paso</th><th>Qué es</th><th>Estado</th></tr>
+    <tr><td>Instalación</td><td>Base de datos, FiveM, txAdmin y Qbox instalados en el PC</td><td><span class="tag ok">Hecho</span></td></tr>
+    <tr><td>Ajustes básicos</td><td>Nombre del servidor, idioma español, permisos de admin</td><td><span class="tag ok">Hecho</span></td></tr>
+    <tr><td>Drogas</td><td>Limpieza de las drogas antiguas + sistema nuevo (marihuana y opio)</td><td><span class="tag ok">Hecho</span> <span class="tag todo">Falta probar en juego</span></td></tr>
+    <tr><td>Paso 2</td><td>Copias de seguridad automáticas</td><td><span class="tag ok">Hecho</span></td></tr>
+    <tr><td>Paso 3a</td><td>Moneda en euros (€) en textos, banco, HUD e inventario</td><td><span class="tag ok">Hecho</span></td></tr>
+    <tr><td>Paso 3b</td><td>Dinero inicial y coches de inicio baratos</td><td><span class="tag ok">Hecho</span></td></tr>
+    <tr><td>Paso 4</td><td>Trabajos: Policía (LSPD), EMS, Mecánico, Concesionario, Taxista, Camionero, Basurero y Grúa</td><td><span class="tag ok">Hecho</span> <span class="tag todo">Revisar cada uno</span></td></tr>
+    <tr><td>Paso 5</td><td>Probar todo en el juego</td><td><span class="tag next">En curso</span></td></tr>
+    <tr><td>Después</td><td>Alquilar un hosting y pasar el servidor</td><td><span class="tag todo">Pendiente</span></td></tr>
+  </table>
+</section>
+
+<section id="como">
+  <h2>🛠️ Cómo hacer…</h2>
+
+  <h3>Encender el servidor</h3>
+  <ol>
+    <li>Abre <b>1 - Iniciar servidor</b> y espera a que cargue la ventana negra.</li>
+    <li>Abre <b>2 - Panel txAdmin</b> y comprueba que a la izquierda pone <span class="tag ok">ONLINE</span>.</li>
+  </ol>
+
+  <h3>Reiniciar el servidor (después de cambiar algo)</h3>
+  <ol>
+    <li>En txAdmin, panel de la izquierda → botón <b>Restart</b>.</li>
+    <li>Espera a que vuelva a <span class="tag ok">ONLINE</span>.</li>
+  </ol>
+
+  <h3>Entrar al juego</h3>
+  <ol>
+    <li>Con el servidor ONLINE, abre <b>FiveM</b>.</li>
+    <li>Pulsa <b>F8</b>, escribe <code>connect localhost</code> y pulsa Enter.</li>
+  </ol>
+
+  <h3>Hacer una copia de seguridad ahora</h3>
+  <ol>
+    <li>Tecla Windows → busca <b>Programador de tareas</b>.</li>
+    <li>Entra en <b>Biblioteca del Programador de tareas</b>.</li>
+    <li>Clic derecho en <b>NATURAL LIFE - Copia BD</b> → <b>Ejecutar</b>.</li>
+  </ol>
+
+  <h3>Sacar coordenadas en el juego (para cambiar ubicaciones)</h3>
+  <p>Colócate en el sitio y escribe en el chat <code>/vec3</code> (un punto) o <code>/vec4</code> (un NPC, incluye hacia dónde mira). Se copian al portapapeles y las pegas en la configuración.</p>
+
+  <div class="note danger">Si algo deja de funcionar después de un cambio, no borres nada: avisa a Claude. Todo tiene copia de seguridad.</div>
+</section>
+
+<section id="drogas">
+  <h2>💊 Sistema de drogas (nl_basic_drugs)</h2>
+  <div class="cols">
+    <div class="box">
+      <h3>🌿 Marihuana · legal</h3>
+      <ol>
+        <li>Compra semillas y una pala en la tienda (Vespucci).</li>
+        <li>Planta en la zona de cultivo de Grapeseed (usa la semilla desde el inventario).</li>
+        <li>Espera 5 minutos y recoge (ALT sobre la planta).</li>
+        <li>Vende barato a NPCs o a otros jugadores (ALT sobre ellos).</li>
+      </ol>
+    </div>
+    <div class="box">
+      <h3>💊 Opio · ilegal</h3>
+      <ol>
+        <li>Recolecta con <b>E</b> en el punto caliente de Great Chaparral.</li>
+        <li>Procesa en la granja O'Neil (5 recursos → 2 opio).</li>
+        <li>Vende en cantidad en la isla (Cayo Perico).</li>
+        <li>O vende poco a poco a NPCs.</li>
+      </ol>
+    </div>
+  </div>
+  <p>Todo se cambia en <b>4 - Configuración de drogas</b>. Explicación completa en el archivo <code>README.md</code> dentro de <b>3 - Scripts propios (nl)</b> → <code>nl_basic_drugs</code>.</p>
+  <div class="note">Las ubicaciones son aproximadas: hay que revisarlas cuando entréis al juego.</div>
+</section>
+
+<section id="personajes">
+  <h2>🧍 Personajes</h2>
+  <ul>
+    <li><b>Un solo personaje</b> por jugador (asociado a su licencia de Rockstar).</li>
+    <li>Pantalla propia morada y negra: <code>[nl]\nl_multichar</code>. El guardado y la seguridad los hace Qbox.</li>
+    <li>Al crear se pide: nombre, apellido, fecha de nacimiento (DD/MM/AAAA) y sexo. Nacionalidad: Española.</li>
+    <li>Reglas: nombre y apellido de 2 a 20 letras, fecha real, mayor de 18 años. No se pueden crear duplicados.</li>
+    <li>Después de crear: elegir apartamento de inicio y aspecto del personaje.</li>
+  </ul>
+</section>
+
+<section id="casa">
+  <h2>🏠 Casa, HUD, menú y mapa</h2>
+  <h3>Casa</h3>
+  <ul>
+    <li>Al crear el personaje se elige 1 de 2 casas gratis (Integrity Way o Del Perro). No se puede tener más de una.</li>
+    <li>Dentro solo se puede: <b>entrar, salir, invitar</b> (tecla <b>G</b> en la salida) y usar el <b>baúl</b> (<b>E</b>, 300 kg, privado).</li>
+    <li>Invitar: la persona tiene que estar en la puerta del edificio; recibe un aviso y acepta o rechaza. Los invitados no pueden abrir el baúl.</li>
+    <li>Sin decoración ni llaves.</li>
+  </ul>
+  <h3>HUD</h3>
+  <p><b>Arriba a la derecha:</b> nombre, trabajo · rango (punto verde = de servicio), efectivo, banco e ID. <b>Abajo a la derecha:</b> salud, estamina, armadura (solo con chaleco), hambre y sed.</p>
+  <h3>Elegir dónde aparecer</h3>
+  <p>Al entrar con un personaje: mapa oscuro con <b>Última ubicación</b> y <b>Mi casa</b>. Para añadir puntos públicos: <code>[qbx]\qbx_spawn\config\client.lua</code>.</p>
+  <h3>Mi menú (tecla ESC o menú radial → "Mi menú")</h3>
+  <ul>
+    <li><b>Personaje:</b> nombre, fecha de nacimiento, ID, trabajo, rango, dinero y DNI.</li>
+    <li><b>Mis vehículos:</b> tus vehículos, matrícula, estado y garaje (solo consulta).</li>
+    <li><b>Ajustes:</b> mostrar/ocultar HUD, tamaño y ajustes avanzados (tecla I).</li>
+    <li><b>Mapa:</b> abre el mapa de GTA (menú de pausa). La pausa también sigue con la tecla <b>P</b>.</li>
+  </ul>
+  <h3>Mapa</h3>
+  <p>Mapa oscuro "Darkmode Atlas" (<code>[standalone]\map-darkatlas</code>). Gasolineras en morado. Sin iconos de actividades ilegales.</p>
+  <h3>Pantalla de carga</h3>
+  <p>Los Santos de noche dibujado con código (sin imágenes pesadas): skyline con ventanas, luces de coches, neblina morada. Título, frase, mensajes de carga y porcentaje real. Música con volumen y silencio (tecla Espacio). Archivos en <code>[standalone]\loadscreen\html</code>; música en <code>html\assets\music</code> (se puede cambiar por otro .mp3).</p>
+  <p><b>Móvil</b> (tecla <b>M</b>): npwd en español, acento morado, solo llamadas, contactos, mensajes y ajustes (las demás apps están ocultas en <code>[npwd]\npwd\config.json</code> → <code>disabledApps</code>).</p>
+  <p><b>Ropa:</b> mismo funcionamiento; aspecto con tipografía Inter y detalles morados.</p>
+</section>
+
+<section id="policia">
+  <h2>👮 Policía (LSPD)</h2>
+  <p>Comisaría principal: <b>Mission Row</b>. Sin helicópteros. Rangos: Cadete → Agente → Sargento → Teniente → Jefe. Cada rango tiene todo lo del anterior y algo más.</p>
+  <table>
+    <tr><th>Rango</th><th>Armería (la paga la empresa)</th><th>Vehículos</th></tr>
+    <tr><td>0 · Cadete</td><td>Esposas, radio, vendas, chaleco, linterna, porra, táser, pistola + munición</td><td>Patrulla</td></tr>
+    <tr><td>1 · Agente</td><td>+ Escopeta y cartuchos</td><td>+ Buffalo, moto</td></tr>
+    <tr><td>2 · Sargento</td><td>+ Pistola de combate, subfusil</td><td>+ Interceptor, furgón</td></tr>
+    <tr><td>3 · Teniente</td><td>+ Fusil y munición</td><td>+ Coche camuflado</td></tr>
+    <tr><td>4 · Jefe</td><td>+ Gas lacrimógeno</td><td>Todos</td></tr>
+  </table>
+  <p>Comandos útiles: <code>/fine</code> multar · <code>/jail</code> prisión · <code>/cuff</code> esposar · <code>/escort</code> llevar · <code>/impound</code> depósito · <code>/spikestrip</code> pinchos · <code>/pobject</code> conos/barreras · <code>/grantlicense</code> licencia de armas.</p>
+</section>
+
+<section id="ems">
+  <h2>🚑 EMS y muerte</h2>
+  <p>Hospitales: <b>Pillbox</b> (centro) y <b>Paleto Bay</b> (norte).</p>
+  <table>
+    <tr><th>Situación</th><th>Qué pasa</th></tr>
+    <tr><td>Te hieren</td><td>Caes al suelo y te desangras durante <b>2 minutos</b>. Puedes pulsar <b>G</b> para avisar a los médicos. Te pueden <b>saquear</b>.</td></tr>
+    <tr><td>Te revive un EMS</td><td>Te levantas <b>sin perder nada</b>.</td></tr>
+    <tr><td>Te llevan a recepción</td><td>Pulsas <b>E</b> junto al recepcionista: <b>500 €</b> y curado al instante, <b>sin perder nada</b>. (Solo si hay menos de 2 médicos de servicio; si hay más, se les avisa.)</td></tr>
+    <tr><td>Pasan los 2 min + 30 s</td><td>Reapareces en el hospital, pagas <b>500 €</b> y <b>pierdes todo el inventario</b>.</td></tr>
+  </table>
+  <p>Taquilla del EMS (la paga la cuenta de empresa del EMS): radio, vendas, analgésicos, botiquín, linterna y extintor. Vehículo: ambulancia (sin helicópteros).</p>
+</section>
+
+<section id="mecanico">
+  <h2>🔧 Mecánico</h2>
+  <p>Taller principal: <b>Los Santos Customs de Vinewood</b> (servicio, taquilla, vehículos, elevadores y tienda de piezas).</p>
+  <ul>
+    <li><b>Tuneo y reparación</b> en los 6 talleres (5 Los Santos Customs + Benny's): <b>solo mecánicos</b>. Los demás jugadores tienen que llamar a uno.</li>
+    <li><b>Reparar</b> en el elevador gasta materiales: chatarra, plástico, acero, aluminio, cobre, hierro.</li>
+    <li><b>Tienda de piezas</b> (solo mecánicos): se paga con el <b>dinero de la empresa</b>, no con el del mecánico. Chatarra 15 €, plástico 10 €, acero 20 €, aluminio 20 €, cobre 25 €, hierro 15 €. Si la empresa no tiene fondos, no se puede comprar. Cada compra queda en el historial de la cuenta del taller. Precios en <code>[nl]\nl_empresas\config.lua</code>.</li>
+    <li>Vehículos de trabajo: grúa de plataforma, grúa, furgoneta de taller y coche de servicio.</li>
+  </ul>
+</section>
+
+<section id="concesionario">
+  <h2>🚗 Concesionarios</h2>
+  <table>
+    <tr><th>Tienda</th><th>Dónde</th><th>Qué vende</th><th>Cómo se compra</th></tr>
+    <tr><td>Premium Deluxe Motorsport</td><td>Centro</td><td>Coches normales, motos, furgonetas y bicis</td><td><b>Autoservicio</b>: el jugador compra solo</td></tr>
+    <tr><td>Luxury Autos</td><td>Rockford Hills</td><td>Deportivos y superdeportivos</td><td><b>Gestionado</b>: solo vende un empleado del Concesionario (10 % de comisión)</td></tr>
+  </table>
+  <ul>
+    <li><b>Interfaz nueva</b> (pulsa <b>E</b> en un coche de exposición): categorías, buscador, fotos, precio, velocidad, aceleración, frenada, agarre y plazas. Botones Comprar, Financiar, Prueba de conducción y Exponer. En Luxury Autos el empleado escribe el ID del cliente.</li>
+    <li>Financiación: entrada del 10 % y hasta 24 cuotas, <b>una cuota cada 24 h de juego</b>. Se pagan en el mostrador de financiación de PDM (<b>Mis financiaciones</b>: pagar cuota o liquidar). Si no se paga a tiempo, el coche se <b>embarga</b> (aviso 10 min antes).</li>
+    <li>Seguridad: el servidor comprueba zona, dinero y que el vehículo se venda en esa tienda (no se pueden comprar patrullas, tanques ni helicópteros con trucos). Una compra cada 3 s por jugador.</li>
+    <li>Coches de inicio baratos: Hardy 8.500 €, Dilettante 11.500 €, Minimus 12.500 €.</li>
+    <li>Sin marina ni tienda aérea (no se venden barcos, aviones ni helicópteros). Bloqueada la Oppressor (moto voladora).</li>
+    <li>Las posiciones de Luxury Autos son aproximadas: hay que ajustarlas en el juego.</li>
+  </ul>
+</section>
+
+<section id="empresas">
+  <h2>🏢 Dinero de empresa</h2>
+  <p>Cada trabajo tiene su <b>cuenta de empresa</b> en el banco. El material de trabajo lo paga la empresa, no el jugador. Si la empresa no tiene fondos, no se puede comprar.</p>
+  <table>
+    <tr><th>Tienda</th><th>Paga la cuenta</th><th>Precios (por unidad)</th></tr>
+    <tr><td>Armería policial</td><td>Policía</td><td>Esposas 50 · Radio 100 · Vendas 10 · Chaleco 150 · Linterna 20 · Porra 30 · Táser 200 · Pistola 500 · Escopeta 800 · Pistola de combate 700 · Subfusil 1.200 · Fusil 1.500 · Gas 100 · Munición 2–4 por bala</td></tr>
+    <tr><td>Taquilla EMS</td><td>EMS</td><td>Radio 100 · Vendas 10 · Analgésicos 15 · Botiquín 50 · Linterna 20 · Extintor 50</td></tr>
+    <tr><td>Piezas de taller</td><td>Mecánico</td><td>Chatarra 15 · Plástico 10 · Acero 20 · Aluminio 20 · Cobre 25 · Hierro 15</td></tr>
+  </table>
+  <h3>📱 Tablet de empresa</h3>
+  <p>Objeto <b>Tablet de empresa</b>: se saca gratis en la armería policial, la taquilla del EMS o la tienda de piezas (la paga la empresa, 250 €). Se usa desde el inventario. Sirve para Policía, EMS, Mecánico, Concesionario y Taxista.</p>
+  <ul>
+    <li><b>Resumen:</b> saldo de la empresa, empleados de servicio y total.</li>
+    <li><b>Movimientos:</b> últimos 30 ingresos y gastos, con quién los hizo.</li>
+    <li><b>Empleados:</b> lista con rango y estado (de servicio, fuera de servicio o desconectado).</li>
+    <li><b>Ingresar efectivo:</b> cualquier empleado. <b>Retirar:</b> solo el jefe.</li>
+    <li>Saldo y movimientos solo los ven los rangos 3 y 4 (y el jefe). Se cambia en <code>[nl]\nl_empresas\config.lua</code>.</li>
+  </ul>
+  <h3>🧹 Trabajos municipales, alquiler y limpieza</h3>
+  <ul>
+    <li><b>Cómo se coge un trabajo:</b> en el Ayuntamiento (pestaña Trabajos o Empleo) pulsas <b>Elegir</b>. Recibes al momento su vehículo junto al edificio, abierto y con llaves, durante <b>1 hora</b>, y el GPS te marca dónde empezar. Solo un vehículo de trabajo a la vez; <code>/dejartrabajo</code> lo devuelve.</li>
+    <li><b>5 trabajos</b>, cada uno con su <b>puesto</b> (NPC con icono en el mapa): allí se empieza, se recibe el vehículo (abierto y con llaves) y se cobra el bonus final al devolverlo.</li>
+    <li>Cada trabajo tiene <b>su propio nivel (1-5)</b>. Subir de nivel da un premio único y más sueldo solo en ese trabajo. Se ve en el Ayuntamiento → <b>Progreso</b>.</li>
+    <li>Turnos de <b>60 minutos</b>. Para dejarlo antes: en el puesto, en el Ayuntamiento o con <code>/dejartrabajo</code>.</li>
+    <li><b>Alquiler de bicicletas y motos</b> enfrente del Ayuntamiento: 15 min, 30 min, 1 h o 2 h. Para terminarlo antes: <code>/devolveralquiler</code>.</li>
+    <li><b>Limpieza cada 1 h 30 min</b> (nl_limpieza): coches de jugadores abandonados al depósito y objetos del suelo. Avisa 10, 5 y 1 minuto antes. Un admin puede lanzarla con <code>/limpieza</code>.</li>
+    <li>Todo se ajusta en <code>[nl]\nl_ayuntamiento\config.lua</code> y <code>[nl]\nl_limpieza\config.lua</code>. Precios <b>provisionales</b>.</li>
+  </ul>
+  <h3>🏛️ Presupuesto del Ayuntamiento</h3>
+  <p>Cada <b>hora en punto</b> se ingresa dinero automáticamente en las empresas públicas (aparece en sus movimientos como "Presupuesto del Ayuntamiento"):</p>
+  <table>
+    <tr><th>Empresa</th><th>Ingreso por hora</th><th>Tope (deja de ingresar si lo supera)</th></tr>
+    <tr><td>Policía</td><td>5.000 €</td><td>50.000 €</td></tr>
+    <tr><td>EMS</td><td>3.000 €</td><td>30.000 €</td></tr>
+  </table>
+  <p>El taller no recibe presupuesto: gana dinero cobrando a sus clientes. Todo se cambia en <code>[nl]\nl_empresas\config.lua</code> (apartado <code>Config.Budget</code>).</p>
+  <p>Las cuentas empiezan en 0 €. Cada compra aparece en el historial de la cuenta. Precios en <code>[nl]\nl_empresas\config.lua</code>.</p>
+</section>
+
+<section id="datos">
+  <h2>⚙️ Datos técnicos</h2>
+  <table>
+    <tr><th>Cosa</th><th>Valor</th></tr>
+    <tr><td>Framework</td><td>Qbox (con ox_inventory, ox_target, ox_lib)</td></tr>
+    <tr><td>Carpeta del servidor</td><td><code>C:\FiveM\txData\Qbox_BB7A4B.base</code></td></tr>
+    <tr><td>Base de datos</td><td>MariaDB · nombre <code>qbox_bb7a4b</code> · usuario <code>root</code></td></tr>
+    <tr><td>Puertos</td><td>Juego <code>30120</code> · Panel txAdmin <code>40120</code></td></tr>
+    <tr><td>Cuenta txAdmin</td><td>Octavian_Nicolae (cuenta de Cfx.re)</td></tr>
+    <tr><td>Jugadores máximos</td><td>48 (gratis). Para más hace falta la suscripción de FiveM.</td></tr>
+    <tr><td>Moneda</td><td>Euros (€). Dinero inicial: 3.000 € efectivo + 10.000 € banco. Sueldo cada 10 min. Coches de inicio: Hardy 8.500 €, Dilettante 11.500 €, Minimus 12.500 €. El resto se puede financiar (entrada 10 %, hasta 24 cuotas).</td></tr>
+    <tr><td>Copias automáticas</td><td>Cada día a las 21:00 · se guardan 14 días</td></tr>
+  </table>
+  <div class="note danger">No compartas la <b>clave de licencia</b> (<code>sv_licenseKey</code> del server.cfg) ni la contraseña de txAdmin con nadie.</div>
+</section>
+
+<section id="historial">
+  <h2>📜 Historial de cambios</h2>
+  <table>
+    <tr><th>Fecha</th><th>Qué se hizo</th></tr>
+    <tr><td>29/09/2026</td><td>Instalación de Qbox, nombre del servidor y idioma español.</td></tr>
+    <tr><td>29/09/2026</td><td>Desactivados los sistemas de drogas antiguos (qbx_drugs, qbx_weed, nl_drogas) con copia de seguridad.</td></tr>
+    <tr><td>29/09/2026</td><td>Creado el sistema de drogas nuevo: marihuana (legal) y opio (ilegal).</td></tr>
+    <tr><td>29/09/2026</td><td>Copias de seguridad diarias automáticas de la base de datos.</td></tr>
+    <tr><td>29/09/2026</td><td>Creada esta carpeta con la guía y los accesos directos.</td></tr>
+    <tr><td>29/09/2026</td><td>Cambio de dólares a euros (€) en 27 archivos. Copia en <code>backups\2026-09-29_cambio_euros</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Dinero inicial 3.000 € + 10.000 € y 3 coches de inicio abaratados. Copia en <code>backups\2026-09-29_economia</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Trabajos reducidos a 8 y traducidos. Apartados: autobús, periodista, viñedo y reciclaje. Copia en <code>backups\2026-09-29_trabajos</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Policía: armería gratis por rangos y vehículos por rango (sin coches de Sheriff). Copia en <code>backups\2026-09-29_policia</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>EMS: 2 min 30 s en el suelo, cura en recepción 500 € instantánea, recepcionistas (nl_hospital), saqueo en el suelo. Copia en <code>backups\2026-09-29_ems</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Sin helicópteros (policía y EMS). Mecánico: tuneo solo para mecánicos, tienda de piezas y vehículos en español. Copia en <code>backups\2026-09-29_mecanico</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Armería policial, taquilla del EMS y piezas del mecánico pagadas con la cuenta de cada empresa (nuevo script nl_empresas).</td></tr>
+    <tr><td>29/09/2026</td><td>Tablet de empresa: saldo, movimientos, empleados, ingresar y retirar. Copia en <code>backups\2026-09-29_tablet</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Presupuesto automático del Ayuntamiento para Policía y EMS.</td></tr>
+    <tr><td>29/09/2026</td><td>Concesionario de lujo gestionado (Luxury Autos), sin marina ni tienda aérea, Oppressor bloqueada. Copia en <code>backups\2026-09-29_concesionario</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Pantalla de personaje nueva (1 solo personaje, morado y negro, validación en el servidor). Copia en <code>backups\2026-09-29_personajes</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>2 casas iniciales con pantalla nueva, baúl privado, creador en español sin peds, objetos iniciales sin carnet. Copias <code>2026-09-29_casas</code> y <code>_creador</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Casas seguras para multijugador (sin baúles mezclados ni casas duplicadas).</td></tr>
+    <tr><td>29/09/2026</td><td>Casa simplificada (invitar, baúl 300 kg), HUD nuevo, menú del jugador (F5), mapa oscuro y limpieza de iconos. Copias <code>2026-09-29_mapa_hud</code> y <code>_casa_simple</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Pantalla de carga nueva (aligerada). Mapa oscuro retirado (colgaba la carga).</td></tr>
+    <tr><td>29/09/2026</td><td>Pantalla de spawn con mapa, HUD en dos piezas (salud y estamina abajo), menú con ESC + Mapa, móvil en español y morado, ropa con mejor aspecto. Copias <code>_spawn_hud_menu</code>, <code>_movil</code> y <code>_ropa_visual</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Casas sin armario: <b>G → Mi vestuario</b> junto a la salida. Población por zonas (nl_poblacion). Copia <code>_vestuario</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Menos NPCs y tráfico, más coches aparcados en 12 zonas de interés. Ganzúa sencilla (solo tecla E), puente en 6-10 s, policía/ambulancia no forzables. Copia <code>_poblacion_ganzua</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>HUD sin cajas + velocímetro nuevo (velocidad, revoluciones, marcha, gasolina, cinturón, motor, luces, crucero, cierre). Sin brújula ni coordenadas. Menú Z (radial) en morado y en español. Pantalla de carga animada con comprobación de sistemas. Concesionario con interfaz nueva y más seguro. Copia <code>_hud_vehiculos</code>.</td></tr>
+    <tr><td>29/09/2026</td><td>Trabajos del Ayuntamiento (5 trabajos, niveles, XP y paga extra cada 10 días; oficina en Alta Street). Grow Shop en la playa con información y compradores NPC. Menú de acciones <b>F6</b> (la Z ya no abre nada). PDM con vendedor NPC ([E] Ver catálogo); Luxury Autos con salón interior. Garajes con interfaz nueva y capacidad 10. Ammu-Nation solo bate y ganzúas; tienda de telefonía (móvil y radio). Radio sencilla (tecla =). Robo de coches más fluido y seguro (ajustes en <code>qbx_vehiclekeys\config\shared.lua</code> → <code>theft</code>). Copia <code>_tanda_ayuntamiento</code>.</td></tr>
+    <tr><td>30/09/2026</td><td>Ayuntamiento v3: 5 puestos de trabajo con nivel propio por trabajo, vehículo junto al puesto que ya se abre con sus llaves, arreglo de la tecla E, puesto de comida fuera, alquiler de bicicletas y motos (15 min a 2 h), limpieza automática cada 1 h 30 min (nl_limpieza) y más peatones con menos tráfico. Copia <code>2026-09-30_ayuntamiento_v3</code>.</td></tr>
+    <tr><td>30/09/2026</td><td>Sin tráfico de NPCs (solo peatones y coches aparcados). Food truck <b>La Parada</b> junto al Ayuntamiento con carta propia (10 productos, pago en efectivo o banco) y 5 comidas nuevas en el inventario: patatas, pizza, dónut, chocolatina y eCola. Carta y precios en <code>nl_ayuntamiento\config.lua</code> → <code>Config.FoodVendor</code>.</td></tr>
+    <tr><td>30/09/2026</td><td>Logo oficial más grande en la pantalla de carga. Volante Thrustmaster T80: x360ce descargado en <code>C:\FiveM\herramientas\x360ce</code> (acceso directo 9).</td></tr>
+    <tr><td>30/09/2026</td><td>Trabajos: vehículo de trabajo de <b>60 minutos</b> (camionero, basurero, grúa, taxi y municipales): si no lo devuelves a tiempo se retira y pierdes la fianza. <b>Rangos con ascenso automático</b> para camionero, basurero y grúa (4 rangos, +10/20/30 % por pago) con aviso de ascenso; se ven en Ayuntamiento → Empleo, que ahora marca en el GPS dónde empieza cada trabajo. Arreglado el dinero infinito del taxi, los taxis ilimitados, las llaves de la grúa y del camión de basura y los blips duplicados. NPCs fijos intocables y callados (nl_npcs). Ajustes en <code>nl_ayuntamiento\config.lua</code> → <code>Config.WorkVehicle</code> y <code>Config.Careers</code>.</td></tr>
+    <tr><td>30/09/2026</td><td>El vehículo de trabajo se entrega <b>al elegir el trabajo</b> en el Ayuntamiento (1 hora). <b>Taxista eliminado</b> (qbx_taxijob en <code>recursos_desactivados</code>) y <b>nuevo trabajo de Minero</b> (nl_minero): cantera Davis Quartz, picar rocas en pocos segundos (piedra, carbón, hierro, cobre y oro) y vender todo en la procesadora de al lado; 4 rangos. Rutas más cortas para camionero (5 tiendas) y basurero (3-6 paradas). Copia <code>2026-09-30_minero</code>.</td></tr>
+  </table>
+</section>
+
+<footer>NATURAL LIFE - RP · Guía mantenida con Claude</footer>
+</div>
+</body>
+</html>
